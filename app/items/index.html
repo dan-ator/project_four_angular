@@ -1,7 +1,7 @@
-<!-- <a data-ui-sref="grumbleNew">New Grumble</a> -->
+<a data-ui-sref="itemNew">New Item</a>
 
 <h2>Items in Closet</h2>
 <div data-ng-repeat="item in ItemIndexViewModel.items">
   <p><a data-ui-sref="itemShow({id: item.id})">{{item.name}}</a></p>
-  <!-- <a data-ui-sref="grumbleEdit({id: grumble.id})">Edit</a> -->
+  <a data-ui-sref="itemEdit({id: item.id})">Edit</a>
 </div>

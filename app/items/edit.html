@@ -1,1 +1,12 @@
 <h2>Edit Item</h2>
+
+<form>
+  <input value="ItemEditViewModel.item.name" data-ng-model="ItemEditViewModel.item.name" />
+  <textarea value="ItemEditViewModel.item.description" data-ng-model="ItemEditViewModel.item.description"></textarea>
+  <input value="ItemEditViewModel.item.category" data-ng-model="ItemEditViewModel.item.category" />
+  <input value="ItemEditViewModel.item.color" data-ng-model="ItemEditViewModel.item.color" />
+  <input value="ItemEditViewModel.item.fabric_type" data-ng-model="ItemEditViewModel.item.fabric_type" />
+  <input value="ItemEditViewModel.item.image" data-ng-model="ItemEditViewModel.item.image" />
+  <button type="button" data-ng-click="ItemEditViewModel.update()">Edit</button>
+  <button data-ng-click="ItemEditViewModel.destroy()">Delete</button>
+</form>

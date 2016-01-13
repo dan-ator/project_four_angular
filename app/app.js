@@ -16,25 +16,25 @@
     $stateProvider
     .state("itemIndex", {
       url: "/items",
-      templateUrl: "js/items/index.html",
+      templateUrl: "app/items/index.html",
       controller: "ItemIndexController",
       controllerAs: "ItemIndexViewModel"
     })
     .state("itemShow", {
       url: "/items/:id",
-      templateUrl: "js/items/show.html",
+      templateUrl: "app/items/show.html",
       controller: "ItemShowController",
       controllerAs: "ItemShowViewModel"
     })
     .state("itemNew", {
-      url: "/items/new",
-      templateUrl: "js/items/new.html",
+      url: "/items",
+      templateUrl: "app/items/new.html",
       controller: "ItemNewController",
       controllerAs: "ItemNewViewModel"
     })
     .state("itemEdit", {
       url: "/items/:id/edit",
-      templateUrl: "js/items/edit.html",
+      templateUrl: "app/items/edit.html",
       controller: "ItemEditController",
       controllerAs: "ItemEditViewModel"
     })

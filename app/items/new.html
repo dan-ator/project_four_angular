@@ -1,1 +1,10 @@
 <h2>New Item</h2>
+<form>
+  <input placeholder="Name" data-ng-model="ItemNewViewModel.item.name" />
+  <textarea placeholder="Description" data-ng-model="ItemNewViewModel.item.description"></textarea>
+  <input placeholder="Category" data-ng-model="ItemNewViewModel.item.category" />
+  <input placeholder="Color" data-ng-model="ItemNewViewModel.item.color" />
+  <input placeholder="Fabric" data-ng-model="ItemNewViewModel.item.fabric_type" />
+  <input placeholder="Image" data-ng-model="ItemNewViewModel.item.image" />
+  <button type="button" data-ng-click="ItemNewViewModel.create()">Create</button>
+</form>
