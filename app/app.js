@@ -5,6 +5,7 @@
   .module("closet", [
     "ui.router",
     "items",
+    "outfits",
     "ngResource"
   ])
   .config([
@@ -37,6 +38,12 @@
       templateUrl: "app/items/edit.html",
       controller: "ItemEditController",
       controllerAs: "ItemEditViewModel"
+    })
+    .state("outfitIndex", {
+      url: "/outfits",
+      templateUrl: "app/outfits/index.html",
+      controller: "OutfitIndexController",
+      controllerAs: "OutfitIndexViewModel"
     })
   }
 })();
