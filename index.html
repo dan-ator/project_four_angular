@@ -7,13 +7,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-  <script src="./bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+  <script src="./bower_components/angular-file-upload/dist/angular-file-upload.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
 
   <script src="app/app.js"></script>
   <script src="app/items/items.js"></script>
@@ -24,12 +25,18 @@
   <script src="app/items/item.factory.js"></script>
   <script src="app/outfits/outfits.js"></script>
   <script src="app/outfits/index.controller.js"></script>
+  <script src="app/outfits/new.controller.js"></script>
+  <script src="app/outfits/show.controller.js"></script>
+  <script src="app/outfits/edit.controller.js"></script>
   <script src="app/outfits/outfit.factory.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1><a data-ui-sref="itemIndex">Closet!</a></h1>
-    <div data-ui-view></div>
+    <div class="jumbotron">
+      <h1><a data-ui-sref="itemIndex">Closet!</a></h1>
+      <h1><a data-ui-sref="outfitIndex">Outfits!</a></h1>
+    </div>
+      <div data-ui-view></div>
   </div>
 </body>
 </html>

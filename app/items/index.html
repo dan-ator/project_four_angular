@@ -1,7 +1,16 @@
-<a data-ui-sref="itemNew">New Item</a>
+<button type="button" class="btn btn-default">
+  <div class="newLink"><a data-ui-sref="itemNew">New Item</a></div>
+</button>
 
 <h2>Items in Closet</h2>
-<div data-ng-repeat="item in ItemIndexViewModel.items">
-  <p><a data-ui-sref="itemShow({id: item.id})">{{item.name}}</a></p>
-  <a data-ui-sref="itemEdit({id: item.id})">Edit</a>
+<div class="row">
+  <div data-ng-repeat="item in ItemIndexViewModel.items">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+      <div class="items">
+        <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="http://localhost:3000/{{item.image.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
+        <!-- <a data-ui-sref="itemEdit({id: item.id})">Edit</a> -->
+      </div>
+    </div>
+  </div>
+</div>
 </div>

@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(236, 243, 247);
+}
+.jumbotron {
+  background-color: rgb(133, 179, 240);
+  margin-top: 1em;
+}
+h1 {
+  display: inline-block;
+  text-align: center;
+}
+h1 a {
+  color: white;
+}
+.items {
+  display: inline-block;
+  padding-top: 1em;
+}
+.newForm {
+  display: inline-grid;
+}

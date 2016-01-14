@@ -1,7 +1,13 @@
-<!-- <a data-ui-sref="outfitNew">New Outfit</a> -->
+<button type="button" class="btn btn-default">
+  <div class="newLink"><a data-ui-sref="outfitNew">New Outfit</a></div>
+</button>
 
 <h2>Outfits</h2>
-<div data-ng-repeat="outfit in OutfitIndexViewModel.outfits">
-  <p><a data-ui-sref="outfitShow({id: outfit.id})">{{outfit.name}}</a></p>
-  <!-- <a data-ui-sref="outfitEdit({id: outfit.id})">Edit</a> -->
+<div class="row">
+  <div data-ng-repeat="outfit in OutfitIndexViewModel.outfits">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <p><a data-ui-sref="outfitShow({id: outfit.id})">{{outfit.name}}</a></p>
+      <a data-ui-sref="outfitEdit({id: outfit.id})">Edit</a>
+    </div>
+  </div>
 </div>

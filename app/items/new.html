@@ -1,16 +1,22 @@
 <h2>New Item</h2>
 <form>
-  <input placeholder="Name" data-ng-model="ItemNewViewModel.item.name" />
-  <textarea placeholder="Description" data-ng-model="ItemNewViewModel.item.description"></textarea>
-  <input placeholder="Category" data-ng-model="ItemNewViewModel.item.category" />
-  <input placeholder="Color" data-ng-model="ItemNewViewModel.item.color" />
-  <input placeholder="Fabric" data-ng-model="ItemNewViewModel.item.fabric_type" />
-  <div ng-if="ItemNewViewModel.uploader">
+  <div class="form-group">
+    <input placeholder="Name" data-ng-model="ItemNewViewModel.item.name" />
+  </div>
+  <div class="form-group">
+    <textarea placeholder="Description" data-ng-model="ItemNewViewModel.item.description"></textarea>
+  </div>
+  <div class="form-group">
+    <input placeholder="Category" data-ng-model="ItemNewViewModel.item.category" />
+  </div>
+  <div class="form-group">
+    <input placeholder="Color" data-ng-model="ItemNewViewModel.item.color" />
+  </div>
+  <div class="form-group">
+    <input placeholder="Fabric" data-ng-model="ItemNewViewModel.item.fabric_type" />
+  </div>
+  <div class="form-group" ng-if="ItemNewViewModel.uploader">
     <input type="file" data-ng-model="ItemNewViewModel.item.image" nv-file-select uploader="ItemNewViewModel.uploader"/>
   </div>
-  <li ng-repeat="item in uploader.queue">
-    Name: <span ng-bind="item.file.name"></span><br/>
-    <button ng-click="item.upload()">upload</button>
-  </li>
-  <button type="button" data-ng-click="ItemNewViewModel.create()">Create</button>
+  <button type="button" class="btn btn-success" data-ng-click="ItemNewViewModel.create()">Create</button>
 </form>

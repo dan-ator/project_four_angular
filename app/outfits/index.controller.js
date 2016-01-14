@@ -9,6 +9,6 @@
   ]);
 
   function OutfitIndexControllerFunction(OutfitFactory){
-    this.items = OutfitFactory.query();
+    this.outfits = OutfitFactory.query();
   }
 }());

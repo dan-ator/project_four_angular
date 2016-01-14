@@ -45,5 +45,23 @@
       controller: "OutfitIndexController",
       controllerAs: "OutfitIndexViewModel"
     })
+    .state("outfitNew", {
+      url: "/outfits",
+      templateUrl: "app/outfits/new.html",
+      controller: "OutfitNewController",
+      controllerAs: "OutfitNewViewModel"
+    })
+    .state("outfitShow", {
+      url: "/outfits/:id",
+      templateUrl: "app/outfits/show.html",
+      controller: "OutfitShowController",
+      controllerAs: "OutfitShowViewModel"
+    })
+    .state("outfitEdit", {
+      url: "/outfits/:id/edit",
+      templateUrl: "app/outfits/edit.html",
+      controller: "OutfitEditController",
+      controllerAs: "OutfitEditViewModel"
+    })
   }
 })();
