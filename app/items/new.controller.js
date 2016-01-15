@@ -13,11 +13,13 @@
     function ItemNewControllerFunction( ItemFactory, FileUploader, $state ){
       var self = this
       this.item = new ItemFactory();
-      this.uploader = new FileUploader({url: "http://localhost:3000/items"});
+      this.uploader = new FileUploader({url: "https://virtual-closet-app.herokuapp.com/items"});
+      this.uploader.onCompleteAll = function(){
+        $state.go('itemIndex')
+      }
       this.create = function(){
         this.uploader.getNotUploadedItems()[0].formData.push(this.item)
         this.uploader.uploadAll()
-        this.uploader.onCompleteAll($state.go('itemIndex'))
         // this.item.$save(this.item, function(item){
         // })
         // function(item){

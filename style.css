@@ -1,16 +1,20 @@
 body {
   background-color: rgb(236, 243, 247);
+  padding-top: 60px;
 }
 .jumbotron {
   background-color: rgb(133, 179, 240);
   margin-top: 1em;
+  color: white;
+  text-align: center;
 }
 h1 {
   display: inline-block;
   text-align: center;
+  color: white;
 }
 h1 a {
-  color: white;
+  float: left;
 }
 .items {
   display: inline-block;
