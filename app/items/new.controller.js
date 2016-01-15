@@ -17,9 +17,12 @@
       this.create = function(){
         this.uploader.getNotUploadedItems()[0].formData.push(this.item)
         this.uploader.uploadAll()
+        this.uploader.onCompleteAll($state.go('itemIndex'))
         // this.item.$save(this.item, function(item){
-          // $state.go('itemIndex', item);
         // })
+        // function(item){
+
+        // }
       }
     }
 }());

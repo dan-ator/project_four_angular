@@ -4,6 +4,7 @@
   angular
   .module("items", [
     "ngResource",
-    "angularFileUpload"
+    "angularFileUpload",
+    "outfits"
   ]);
 }());
