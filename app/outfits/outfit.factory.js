@@ -7,7 +7,7 @@
   ]);
 
   function FactoryFunction($resource){
-    return $resource("https://virtual-closet-app.herokuapp.com/outfits", {}, {
+    return $resource("https://virtual-closet-app.herokuapp.com/outfits/:id", {}, {
       update: {method: "PUT"}
     });
   }

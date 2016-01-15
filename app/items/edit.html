@@ -2,19 +2,19 @@
 
 <form>
   <div class="form-group">
-    <input value="ItemEditViewModel.item.name" data-ng-model="ItemEditViewModel.item.name" />
+    <p>Name:</p><input value="ItemEditViewModel.item.name" data-ng-model="ItemEditViewModel.item.name" />
   </div>
   <div class="form-group">
-    <textarea value="ItemEditViewModel.item.description" data-ng-model="ItemEditViewModel.item.description"></textarea>
+    <p>Description:</p><textarea value="ItemEditViewModel.item.description" data-ng-model="ItemEditViewModel.item.description"></textarea>
   </div>
   <div class="form-group">
-    <input value="ItemEditViewModel.item.category" data-ng-model="ItemEditViewModel.item.category" />
+    <p>Category:</p><input value="ItemEditViewModel.item.category" data-ng-model="ItemEditViewModel.item.category" />
   </div>
   <div class="form-group">
-    <input value="ItemEditViewModel.item.color" data-ng-model="ItemEditViewModel.item.color" />
+    <p>Color:</p><input value="ItemEditViewModel.item.color" data-ng-model="ItemEditViewModel.item.color" />
   </div>
   <div class="form-group">
-    <input value="ItemEditViewModel.item.fabric_type" data-ng-model="ItemEditViewModel.item.fabric_type" />
+    <p>Fabric:</p><input value="ItemEditViewModel.item.fabric_type" data-ng-model="ItemEditViewModel.item.fabric_type" />
   </div>
   <div class="form-group" ng-if="ItemNewViewModel.uploader">
     <input type="file" data-ng-model="ItemEditViewModel.item.image" nv-file-select uploader="ItemEditViewModel.uploader"/>
