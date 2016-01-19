@@ -4,7 +4,10 @@
 
 <h2>Items in Closet</h2>
 <div class="row">
-  <div data-ng-repeat="item in ItemIndexViewModel.items">
+  <div class="searchBar">Search by Color: <input type="text" ng-model="search.color"></div>
+  <div class="searchBar">Search by Category: <input type="text" ng-model="search.category"></div>
+  <div class="searchBar">Search by Fabric: <input type="text" ng-model="search.fabric_type"></div>
+  <div data-ng-repeat="item in ItemIndexViewModel.items | filter:search">
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
       <div class="items">
         <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="{{item.image.thumb.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
