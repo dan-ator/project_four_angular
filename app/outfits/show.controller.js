@@ -11,5 +11,6 @@
 
   function OutfitShowControllerFunction(OutfitFactory, $stateParams){
     this.outfit = OutfitFactory.get({id: $stateParams.id});
+    // this.outfit.outfit_items = outfit_item.outfit_id;
   }
 }());

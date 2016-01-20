@@ -10,7 +10,7 @@
 <img data-ng-src="{{ItemShowViewModel.item.image.url}}" src="#" alt="{{ItemShowViewModel.item.name}}" />
 
 <p>Choose Outfit to Add To:</p>
-<select>
+<select data-ng-model="ItemShowViewModel.outfit_id">
   <option data-ng-repeat="outfit in ItemShowViewModel.outfits" value="{{outfit.id}}">{{outfit.name}}</option>
 </select>
 <button type="button" class="btn btn-success" data-ng-click="ItemShowViewModel.create()">Add to Outfit</button>
