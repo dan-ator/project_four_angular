@@ -3,5 +3,10 @@
 
 <p><dfn>Category:</dfn>{{OutfitShowViewModel.outfit.category}}</p>
 
-<!-- <img data-ng-src="{{ItemShowViewModel.item.image.url}}" src="#" alt="{{ItemShowViewModel.item.name}}" /> -->
-<!-- {{OutfitShowViewModel.outfit.outfit_items}} -->
+<div class="row">
+  <div data-ng-repeat="item in OutfitShowViewModel.items">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 items">
+      <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="{{item.image.thumb.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
+    </div>
+  </div>
+</div>
