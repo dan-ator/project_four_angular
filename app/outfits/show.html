@@ -7,6 +7,7 @@
   <div data-ng-repeat="item in OutfitShowViewModel.items">
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 items">
       <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="{{item.image.thumb.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
+      <button class="btn btn-danger" data-ng-click="OutfitShowViewModel.destroy()">Remove</button>
     </div>
   </div>
 </div>

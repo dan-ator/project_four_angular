@@ -7,10 +7,11 @@
 <p><dfn>Fabric:</dfn> {{ItemShowViewModel.item.fabric_type}}</p>
 <p><dfn>Color:</dfn> {{ItemShowViewModel.item.color}}</p>
 <p><dfn>Category:</dfn> {{ItemShowViewModel.item.category}}</p>
-<img data-ng-src="{{ItemShowViewModel.item.image.url}}" src="#" alt="{{ItemShowViewModel.item.name}}" />
 
 <p>Choose Outfit to Add To:</p>
 <select data-ng-model="ItemShowViewModel.outfit_id">
   <option data-ng-repeat="outfit in ItemShowViewModel.outfits" value="{{outfit.id}}">{{outfit.name}}</option>
 </select>
 <button type="button" class="btn btn-success" data-ng-click="ItemShowViewModel.create()">Add to Outfit</button>
+
+<img data-ng-src="{{ItemShowViewModel.item.image.url}}" src="#" alt="{{ItemShowViewModel.item.name}}" />
