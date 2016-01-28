@@ -14,7 +14,7 @@
     this.outfit = OutfitFactory.get({id: $stateParams.id});
     this.update = function(){
       this.outfit.$update({id: $stateParams.id}, function(outfit){
-        $state.go('outfitShow', outfit);
+        $state.go('outfitIndex', outfit);
       })
     }
     this.destroy = function(){

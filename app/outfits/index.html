@@ -5,9 +5,10 @@
 <h2>Outfits</h2>
 <div class="row">
   <div data-ng-repeat="outfit in OutfitIndexViewModel.outfits">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <p><a data-ui-sref="outfitShow({id: outfit.id})">{{outfit.name}}</a></p>
-      <a data-ui-sref="outfitEdit({id: outfit.id})">Edit</a>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <p id="outfitNames"><a data-ui-sref="outfitShow({id: outfit.id})">{{outfit.name}}</a></p>
+      <p>{{outfit.category}}</p>
+      <a data-ui-sref="outfitEdit({id: outfit.id})">Edit Category</a>
     </div>
   </div>
 </div>
