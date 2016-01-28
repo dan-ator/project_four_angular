@@ -4,10 +4,10 @@
 <p><dfn>Category:</dfn>{{OutfitShowViewModel.outfit.category}}</p>
 
 <div class="row">
-  <div data-ng-repeat="item in OutfitShowViewModel.items">
+  <div data-ng-repeat="outfit_item in OutfitShowViewModel.outfit_items">
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 items">
-      <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="{{item.image.thumb.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
-      <button class="btn btn-danger" data-ng-click="OutfitShowViewModel.destroy()">Remove</button>
+      <a data-ui-sref="itemShow({id: outfit_item.item.id})"><img data-ng-src="{{outfit_item.item.image.thumb.url}}" src="#" alt="{{outfit_item.item.name}}" class="img-rounded"/></a>
+      <button class="btn btn-danger" data-ng-click="OutfitShowViewModel.destroy(outfit_item)">Remove</button>
     </div>
   </div>
 </div>

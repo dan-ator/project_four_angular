@@ -16,7 +16,7 @@
   </div>
 </form>
   <div data-ng-repeat="item in ItemIndexViewModel.items | filter:search">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+    <div class="col-md-4 col-sm-6 col-xs-12" >
       <div class="items">
         <a data-ui-sref="itemShow({id: item.id})"><img data-ng-src="{{item.image.thumb.url}}" src="#" alt="{{item.name}}" class="img-rounded"/></a>
       </div>
