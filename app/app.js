@@ -4,14 +4,25 @@
   angular
   .module("closet", [
     "ui.router",
+    "ng-token-auth",
     "items",
     "outfits",
     "ngResource"
   ])
   .config([
+    "$authProvider",
+    AuthConfigFunction
+  ])
+  .config([
     "$stateProvider",
     RouterFunction
   ]);
+
+  function AuthConfigFunction($authProvider) {
+    $authProvider.configure({
+      apiUrl: URL_BASE
+    });
+  }
 
   function RouterFunction($stateProvider){
     $stateProvider
@@ -66,6 +77,24 @@
       templateUrl: "app/outfits/edit.html",
       controller: "OutfitEditController",
       controllerAs: "OutfitEditViewModel"
+    })
+    .state("signin", {
+      url: "/signin",
+      templateUrl: "app/users/signin.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signout", {
+      url: "/signout",
+      templateUrl: "app/users/signout.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
+    })
+    .state("signup", {
+      url: "/signup",
+      templateUrl: "app/users/signup.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
     })
   }
 })();
