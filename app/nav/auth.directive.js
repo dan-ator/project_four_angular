@@ -3,7 +3,7 @@
     .module("closet")
     .directive("authNav", function($auth) {
       return {
-        templateUrl: "app/nav/_auth.html",
+        templateUrl: "app/nav/auth.html",
         replace: true,
         restrict: 'E',
         link: function(scope) {
