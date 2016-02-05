@@ -1,0 +1,11 @@
+<nav>
+  <div ng-show="currentUser">
+    Logged in as {{currentUser.email}}
+    <button type="button" class="btn btn-default navbar-btn"><a data-ui-sref="signout">Sign Out</a></button>
+  </div>
+
+  <div ng-show="!currentUser">
+    <button type="button" class="btn btn-default navbar-btn"><a data-ui-sref="signup">Sign Up</a></button>
+    <button type="button" class="btn btn-default navbar-btn"><a data-ui-sref="signin">Sign In</a></button>
+  </div>
+</nav>

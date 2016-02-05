@@ -12,6 +12,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   <script src="./bower_components/angular-file-upload/dist/angular-file-upload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -34,6 +36,8 @@
   <script src="app/outfits/edit.controller.js"></script>
   <script src="app/outfits/outfit.factory.js"></script>
   <script src="app/outfits/outfit_item.factory.js"></script>
+  <script src="app/users/sessions.controller.js"></script>
+  <script src="app/nav/auth.directive.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -44,18 +48,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" data-ui-sref="home">Virtual Closet</a>
+      <a class="navbar-brand" data-ui-sref="home">Organized Closet Domain</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a data-ui-sref="itemIndex">Closet!</a></li>
         <li><a a data-ui-sref="outfitIndex">Outfits!</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right" id="authNav">
+        <auth-nav></auth-nav>
+      </ul>
     </div>
   </nav>
     <div class="container">
     <div class="jumbotron">
-      <h1>Closet!</h1>
+      <div class = "container push-spaces">
+        <h1>Organized Closet Domain</h1>
+      </div>
     </div>
       <div data-ui-view></div>
     </div>
